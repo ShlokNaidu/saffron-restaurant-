@@ -13,7 +13,7 @@ export default function AnimatedSection({
   distance = 40,
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.05 });
 
   const directions = {
     up: { y: distance, x: 0 },
@@ -48,7 +48,7 @@ export default function AnimatedSection({
 
 export function StaggerContainer({ children, className = '', staggerDelay = 0.1 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.05 });
 
   return (
     <motion.div
