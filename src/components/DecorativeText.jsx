@@ -9,7 +9,7 @@ export default function DecorativeText({ text, top = "0%", left = "0%", opacity 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
       <motion.span
-        style={{ 
+        style={{
           y,
           top,
           left,

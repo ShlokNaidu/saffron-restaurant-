@@ -59,21 +59,21 @@ export default function EventsPage() {
                   <div className="h-64 bg-gradient-to-br from-surface to-near-black relative overflow-hidden group-hover:opacity-90 transition-opacity">
                     {/* Media Render */}
                     {event.mediaType === 'image' && (
-                      <Image 
-                        src={event.media} 
-                        alt={event.title} 
-                        fill 
+                      <Image
+                        src={event.media}
+                        alt={event.title}
+                        fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 z-0" 
+                        className="object-cover group-hover:scale-105 transition-transform duration-700 z-0"
                       />
                     )}
-                    
+
                     {event.mediaType === 'video' && (
-                      <video 
-                        autoPlay 
-                        loop 
-                        muted 
-                        playsInline 
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
                         preload="auto"
                         poster="/images/about/venue-primary.jpg"
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 z-0 bg-espresso shadow-inner"
@@ -85,10 +85,10 @@ export default function EventsPage() {
 
                     {event.mediaType === 'vimeo' && (
                       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-black flex items-center justify-center">
-                        <iframe 
+                        <iframe
                           src={`${event.media}&background=1&autoplay=1&muted=1&loop=1`}
-                          className="w-[150%] h-[150%] pointer-events-none" 
-                          allow="autoplay; fullscreen; picture-in-picture" 
+                          className="w-[150%] h-[150%] pointer-events-none"
+                          allow="autoplay; fullscreen; picture-in-picture"
                           frameBorder="0"
                         />
                       </div>
@@ -141,7 +141,7 @@ export default function EventsPage() {
             Host Your Event at <span className="text-gold">Saffron</span>
           </h2>
           <p className="text-warm-muted text-base font-inter mb-10 max-w-2xl mx-auto leading-relaxed">
-            From weddings and birthdays to corporate dinners and cultural celebrations — our rooftop venue 
+            From weddings and birthdays to corporate dinners and cultural celebrations — our rooftop venue
             is the perfect setting for any occasion.
           </p>
           <a

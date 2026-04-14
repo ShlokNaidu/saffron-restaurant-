@@ -34,7 +34,7 @@ export default function CookieConsent() {
               <div className="flex-1">
                 <h4 className="font-cormorant text-lg text-gold mb-1">This website uses cookies</h4>
                 <p className="text-warm-muted text-sm font-inter leading-relaxed">
-                  We use cookies to analyze website traffic and optimize your experience. 
+                  We use cookies to analyze website traffic and optimize your experience.
                   By accepting, your data will be aggregated with all other user data.
                 </p>
               </div>

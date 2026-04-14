@@ -19,11 +19,11 @@ function HeroSection() {
     <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden film-grain">
       {/* Cinematic Background Video */}
       <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover grayscale-[20%] brightness-[0.4] scale-110"
         >
           <source src="/images/events/negin-event.mp4" type="video/mp4" />
@@ -31,7 +31,7 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-near-black/60 via-transparent to-near-black" />
         <div className="absolute inset-0 bg-near-black/20 backdrop-blur-[2px]" />
       </div>
-      
+
       {/* Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-[50vw] h-[50vh] bg-gold/5 rounded-full blur-[120px] animate-pulse" />
 
@@ -44,9 +44,9 @@ function HeroSection() {
           <p className="eyebrow mb-10 text-gold/80 tracking-[0.3em] cinematic-glow">
             6th Floor Rooftop · Golden Palace Hotel
           </p>
-          
+
           <h1 className="font-cormorant text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold heading-punch text-cream mb-12 luxury-text-shadow">
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: customEase }}
@@ -54,7 +54,7 @@ function HeroSection() {
             >
               Where <span className="text-gold italic">Persian Nights</span>
             </motion.span>
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease: customEase }}
@@ -140,10 +140,10 @@ function CulinaryPhilosophy() {
           <div className="lg:col-span-5 relative">
             <AnimatedSection>
               <div className="aspect-[4/5] relative rounded-lg overflow-hidden border border-gold/10">
-                <Image 
-                  src="/images/about/culinary-1.jpg" 
-                  alt="Saffron Soul" 
-                  fill 
+                <Image
+                  src="/images/about/culinary-1.jpg"
+                  alt="Saffron Soul"
+                  fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
                 />
@@ -155,7 +155,7 @@ function CulinaryPhilosophy() {
               </div>
             </AnimatedSection>
           </div>
-          
+
           <div className="lg:col-span-7">
             <AnimatedSection delay={0.2}>
               <p className="eyebrow text-gold mb-6">Our Philosophy</p>
@@ -164,7 +164,7 @@ function CulinaryPhilosophy() {
               </h2>
               <div className="space-y-6 text-warm-muted font-inter text-lg leading-relaxed max-w-xl">
                 <p>
-                  At Saffron, we don&apos;t just serve food; we narrate the rich heritage of Persia through 
+                  At Saffron, we don&apos;t just serve food; we narrate the rich heritage of Persia through
                   aromatic spices, flame-grilled perfection, and centuries-old traditions.
                 </p>
                 <div className="flex items-center gap-6 pt-4">
@@ -252,7 +252,7 @@ function LightBreak() {
         <AnimatedSection>
           <span className="text-gold-muted font-cormorant text-8xl lg:text-[14rem] opacity-10 block leading-none mb-4 scale-x-[-1]">“</span>
           <h2 className="font-cormorant text-3xl sm:text-6xl lg:text-8xl font-light text-espresso tracking-tight italic leading-[0.9] max-w-5xl mx-auto cinematic-glow">
-            We don&apos;t just serve food; we narrate the <span className="font-semibold block sm:inline px-4">soul of Persia</span> 
+            We don&apos;t just serve food; we narrate the <span className="font-semibold block sm:inline px-4">soul of Persia</span>
             high above the heartbeat of Tbilisi.
           </h2>
           <div className="w-24 h-[1px] bg-gold-muted mx-auto mt-20 mb-10" />
@@ -269,16 +269,16 @@ function HeritageMoment() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <Image 
-          src="/images/about/venue-primary.jpg" 
-          alt="Saffron Heritage" 
-          fill 
+        <Image
+          src="/images/about/venue-primary.jpg"
+          alt="Saffron Heritage"
+          fill
           sizes="100vw"
           className="object-cover opacity-30 grayscale saturate-0 scale-105 hover:scale-100 transition-all duration-[3s]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-near-black via-near-black/40 to-near-black" />
       </div>
-      
+
       <div className="container-max mx-auto px-4 relative z-10 text-center">
         <AnimatedSection>
           <p className="eyebrow text-gold/60 mb-8 tracking-[0.5em]">Defining Excellence</p>
@@ -359,8 +359,8 @@ function SignatureDishes() {
                   </p>
                   <div className="flex items-center justify-between mt-auto">
                     <span className="text-gold font-cormorant text-xl font-medium">₾{dish.price}</span>
-                    <Link 
-                      href="/menu" 
+                    <Link
+                      href="/menu"
                       className="text-gold-muted text-sm font-inter hover:text-gold transition-colors duration-300 flex items-center gap-1"
                     >
                       View Menu
@@ -427,7 +427,7 @@ function DeliveryPlatforms() {
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <span 
+                <span
                   className="font-cormorant text-2xl font-semibold tracking-heading transition-colors duration-300"
                   style={{ color: platform.color }}
                 >
@@ -459,7 +459,7 @@ function EventsTeaser() {
                   Live Music & <span className="text-gold">Events</span>
                 </h3>
                 <p className="text-warm-muted text-sm font-inter leading-relaxed mb-6">
-                  From live Persian music performances to DJ nights and cultural celebrations — 
+                  From live Persian music performances to DJ nights and cultural celebrations —
                   there&apos;s always something special happening at Saffron.
                 </p>
               </div>
@@ -481,7 +481,7 @@ function EventsTeaser() {
                   Saffron <span className="text-gold">Game Night</span>
                 </h3>
                 <p className="text-warm-muted text-sm font-inter leading-relaxed mb-6">
-                  Battle it out over backgammon with a chance to win 500 GEL 
+                  Battle it out over backgammon with a chance to win 500 GEL
                   in prizes and our finest wines. Strategy, luck, and great food.
                 </p>
               </div>

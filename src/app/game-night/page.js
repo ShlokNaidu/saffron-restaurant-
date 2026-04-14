@@ -21,7 +21,7 @@ export default function GameNightPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    
+
     try {
       await fetch('https://formspree.io/f/xwpkpqkv', {
         method: 'POST',
@@ -41,7 +41,7 @@ export default function GameNightPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,83,0.12),transparent_60%)]" />
         <div className="absolute top-40 left-10 w-72 h-72 bg-gold/5 rounded-full blur-[100px]" />
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-gold/3 rounded-full blur-[120px]" />
-        
+
         <div className="container-max mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -101,8 +101,8 @@ export default function GameNightPage() {
 
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
             {galleryImages.map((src, i) => (
-              <StaggerItem 
-                key={i} 
+              <StaggerItem
+                key={i}
                 className={i === 0 || i === 3 ? "col-span-2 md:col-span-1" : ""}
               >
                 <div className="relative w-full aspect-square rounded-sm overflow-hidden group">
@@ -190,11 +190,11 @@ export default function GameNightPage() {
                       placeholder="your@email.com"
                     />
                   </div>
-                  
+
                   <button type="submit" className="btn-gold w-full text-base">
                     Send
                   </button>
-                  
+
                   <p className="text-hints text-xs font-inter text-center mt-4">
                     This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
                   </p>

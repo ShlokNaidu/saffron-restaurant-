@@ -74,8 +74,8 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`px-3 py-2 text-sm font-inter font-medium transition-colors duration-300 rounded-sm
-                  ${pathname === link.href 
-                    ? 'text-gold' 
+                  ${pathname === link.href
+                    ? 'text-gold'
                     : 'text-cream/80 hover:text-gold'
                   }`}
               >

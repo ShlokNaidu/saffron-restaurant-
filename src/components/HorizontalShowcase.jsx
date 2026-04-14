@@ -58,8 +58,8 @@ export default function HorizontalShowcase() {
   });
 
   const x = useTransform(
-    scrollYProgress, 
-    [0.1, 0.95], 
+    scrollYProgress,
+    [0.1, 0.95],
     ["0%", isMobile ? "-85.5%" : "-73.5%"]
   );
   const headerOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
@@ -103,9 +103,9 @@ export default function HorizontalShowcase() {
                 className="object-cover transition-transform duration-[1.5s] group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-near-black via-near-black/20 to-transparent" />
-              
+
               <div className="absolute bottom-0 left-0 p-10 lg:p-16 w-full">
-                <motion.p 
+                <motion.p
                   className="eyebrow text-gold/80 mb-4 tracking-[0.3em]"
                 >
                   {item.category}
@@ -119,24 +119,24 @@ export default function HorizontalShowcase() {
               </div>
             </motion.div>
           ))}
-          
+
           {/* Final Call to Action Slide */}
           <div className="h-[65vh] w-[80vw] md:w-[65vw] lg:w-[50vw] flex flex-col items-center justify-center text-center p-12 bg-espresso border border-gold/20 rounded-sm flex-shrink-0 relative overflow-hidden">
-             <div className="absolute inset-0 bg-gold/5 animate-pulse" />
-             <h3 className="font-cormorant text-4xl lg:text-8xl font-semibold text-gold mb-8 italic relative z-10 leading-none">
-               READY TO <br /> EXPERIENCE?
-             </h3>
-             <p className="text-warm-muted text-base lg:text-xl font-inter max-w-md mb-12 leading-relaxed relative z-10">
-               Join us high above the Tbilisi skyline for an unforgettable fusion of rhythm and taste.
-             </p>
-             <div className="relative z-10">
-                <a 
-                  href="https://api.whatsapp.com/send/?phone=995595060033"
-                  className="btn-gold px-10 py-4 text-base lg:!px-16 lg:!py-6 lg:text-xl cinematic-glow"
-                >
-                  Book Your Table
-                </a>
-             </div>
+            <div className="absolute inset-0 bg-gold/5 animate-pulse" />
+            <h3 className="font-cormorant text-4xl lg:text-8xl font-semibold text-gold mb-8 italic relative z-10 leading-none">
+              READY TO <br /> EXPERIENCE?
+            </h3>
+            <p className="text-warm-muted text-base lg:text-xl font-inter max-w-md mb-12 leading-relaxed relative z-10">
+              Join us high above the Tbilisi skyline for an unforgettable fusion of rhythm and taste.
+            </p>
+            <div className="relative z-10">
+              <a
+                href="https://api.whatsapp.com/send/?phone=995595060033"
+                className="btn-gold px-10 py-4 text-base lg:!px-16 lg:!py-6 lg:text-xl cinematic-glow"
+              >
+                Book Your Table
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

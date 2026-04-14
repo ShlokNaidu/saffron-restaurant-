@@ -35,6 +35,20 @@ export default function MenuPage() {
     return () => observer.disconnect();
   }, []);
 
+  // Auto-scroll the nav bar to center the active category on mobile
+  useEffect(() => {
+    if (activeCategory && navRef.current) {
+      const activeBtn = navRef.current.querySelector(`button[data-id="${activeCategory}"]`);
+      if (activeBtn && window.innerWidth < 1024) { // Only on tablet/mobile
+        activeBtn.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center',
+          block: 'nearest'
+        });
+      }
+    }
+  }, [activeCategory]);
+
   const scrollToCategory = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -49,16 +63,16 @@ export default function MenuPage() {
       {/* Elite Menu Hero */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden film-grain">
         <div className="absolute inset-0">
-          <Image 
-            src="/images/menu/kings-favorite.webp" 
-            alt="Menu Essence" 
-            fill 
+          <Image
+            src="/images/menu/kings-favorite.webp"
+            alt="Menu Essence"
+            fill
             sizes="100vw"
             className="object-cover opacity-30 grayscale-[50%] scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-near-black via-near-black/60 to-near-black" />
         </div>
-        
+
         <div className="container-max mx-auto px-4 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -77,7 +91,7 @@ export default function MenuPage() {
       </section>
 
       {/* Sticky Category Nav */}
-      <div 
+      <div
         ref={navRef}
         className="sticky top-16 sm:top-20 z-30 bg-espresso/95 backdrop-blur-md border-b border-gold/10"
       >
@@ -86,6 +100,7 @@ export default function MenuPage() {
             {menuCategories.map((cat) => (
               <button
                 key={cat.id}
+                data-id={cat.id}
                 onClick={() => scrollToCategory(cat.id)}
                 className={`flex-shrink-0 px-4 py-2 text-sm font-inter font-medium rounded-sm transition-all duration-300
                   ${activeCategory === cat.id
@@ -106,7 +121,7 @@ export default function MenuPage() {
           {menuCategories.map((category) => (
             <div key={category.id} id={category.id} className="mb-32 lg:mb-48 last:mb-0 scroll-mt-48 relative">
               <DecorativeText text={category.id.toUpperCase()} top="0%" left="50%" opacity={0.02} />
-              
+
               <AnimatedSection className="mb-12 text-center lg:text-left">
                 <p className="eyebrow mb-4 tracking-[0.3em] text-gold/60">{category.subtitle}</p>
                 <h2 className="font-cormorant text-5xl sm:text-6xl lg:text-8xl font-semibold text-cream tracking-heading leading-none">
@@ -134,7 +149,7 @@ export default function MenuPage() {
                           />
                         </div>
                       )}
-                      
+
                       <div className="flex-1 flex flex-col justify-center min-w-0">
                         <div className="flex items-start justify-between gap-2 mb-1">
                           <h3 className="font-cormorant text-lg font-medium text-cream tracking-heading leading-tight">

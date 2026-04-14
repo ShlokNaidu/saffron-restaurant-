@@ -15,7 +15,7 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="text-warm-muted font-inter text-sm mb-8 max-w-md mx-auto">
-          It seems this page has wandered off. Perhaps it&apos;s enjoying the rooftop view. 
+          It seems this page has wandered off. Perhaps it&apos;s enjoying the rooftop view.
           Let us guide you back.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

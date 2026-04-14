@@ -85,11 +85,11 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-6 text-warm-muted font-inter text-base md:text-lg leading-relaxed">
                   <p>
-                    At Saffron Restaurant, we are passionate about serving exceptional food. We use the freshest 
+                    At Saffron Restaurant, we are passionate about serving exceptional food. We use the freshest
                     ingredients and the highest quality meats to create dishes that are both flavorful and satisfying.
                   </p>
                   <p>
-                    Our menu blends the best of Persian cuisine with international favorites, featuring everything 
+                    Our menu blends the best of Persian cuisine with international favorites, featuring everything
                     from kebabs and barbecue to hearty stews, fresh salads, and comforting soups.
                   </p>
                 </div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
           <AnimatedSection>
             <span className="text-gold-muted font-cormorant text-8xl lg:text-[14rem] opacity-20 block leading-none mb-4 scale-x-[-1]">“</span>
             <h2 className="font-cormorant text-4xl sm:text-6xl lg:text-8xl font-light text-espresso tracking-tight italic leading-[0.9] max-w-6xl mx-auto cinematic-glow">
-              We don&apos;t just serve meals; we share the <span className="font-semibold block sm:inline px-4">golden heritage</span> 
+              We don&apos;t just serve meals; we share the <span className="font-semibold block sm:inline px-4">golden heritage</span>
               of my homeland with the beautiful city of Tbilisi.
             </h2>
             <div className="w-16 h-[1px] bg-gold-muted mx-auto mt-16 mb-8" />
@@ -173,10 +173,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <AnimatedSection>
               <div className="aspect-[3/4] md:aspect-[4/5] relative rounded-lg overflow-hidden group">
-                <Image 
-                  src="/images/about/culinary-1.jpg" 
-                  alt="Saffron Culinary Specialty" 
-                  fill 
+                <Image
+                  src="/images/about/culinary-1.jpg"
+                  alt="Saffron Culinary Specialty"
+                  fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
@@ -186,13 +186,13 @@ export default function AboutPage() {
                 </div>
               </div>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={0.2}>
               <div className="aspect-[3/4] md:aspect-[4/5] relative rounded-lg overflow-hidden group">
-                <Image 
-                  src="/images/about/culinary-2.jpg" 
-                  alt="Saffron Authentic Dining" 
-                  fill 
+                <Image
+                  src="/images/about/culinary-2.jpg"
+                  alt="Saffron Authentic Dining"
+                  fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-1000"
                 />
@@ -236,14 +236,14 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-6 text-warm-muted font-inter text-base md:text-lg leading-relaxed">
                   <p>
-                    At Saffron Restaurant, we believe in creating more than just delicious meals — we create 
-                    experiences. From live musical performances and vibrant dance festivals to business meetings, 
-                    corporate lunches, weddings, and birthday celebrations, we&apos;re here to make your special 
+                    At Saffron Restaurant, we believe in creating more than just delicious meals — we create
+                    experiences. From live musical performances and vibrant dance festivals to business meetings,
+                    corporate lunches, weddings, and birthday celebrations, we&apos;re here to make your special
                     moments unforgettable.
                   </p>
                   <p>
-                    On selected evenings, we offer live music, enhancing your dining experience with the perfect 
-                    atmosphere. Whether it&apos;s an intimate gathering or a large celebration, Saffron Restaurant 
+                    On selected evenings, we offer live music, enhancing your dining experience with the perfect
+                    atmosphere. Whether it&apos;s an intimate gathering or a large celebration, Saffron Restaurant
                     is the ideal venue in Tbilisi for all kinds of events.
                   </p>
                 </div>
