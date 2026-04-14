@@ -2,26 +2,133 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #9e7a35 #120a02;
+  }
+
+  body {
+    background-color: #1a0f05;
+    color: #f5ead4;
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(212, 168, 83, 0.3);
+    color: #f5ead4;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #120a02;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #9e7a35;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d4a853;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant), serif;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-10 py-4 bg-gold text-espresso font-inter font-medium 
+    rounded-sm transition-all duration-300 hover:bg-gold-muted hover:shadow-lg hover:shadow-gold/20
+    focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-espresso;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-10 py-4 border border-gold text-gold font-inter font-medium
+    rounded-sm transition-all duration-300 hover:bg-gold hover:text-espresso
+    focus:outline-none focus:ring-2 focus:ring-gold/50 focus:ring-offset-2 focus:ring-offset-espresso;
+  }
+
+  .gold-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold via-cream to-gold;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-16 py-32 sm:py-48 lg:py-64;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .eyebrow {
+    @apply text-sm sm:text-base font-inter font-medium uppercase tracking-eyebrow text-gold-muted;
+  }
+
+  .card-surface {
+    @apply bg-surface border border-gold/10 rounded-lg transition-all duration-300
+    hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5;
+  }
+
+  .gold-divider {
+    @apply w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .cinematic-glow {
+    filter: drop-shadow(0 0 15px rgba(212, 168, 83, 0.4));
+  }
+
+  .film-grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: overlay;
+  }
+
+  .heading-punch {
+    @apply leading-[0.85] tracking-[-0.04em];
+  }
+
+  .luxury-text-shadow {
+    text-shadow: 0 10px 30px rgba(0,0,0,0.8);
   }
 }
